@@ -7,5 +7,10 @@ import (
 )
 
 func main() {
-	fmt.Println(shortener.ShortenUrl())
+	fmt.Println("Please input your url here: ")
+
+	userInput := shortener.ParseUserInput()
+
+	shortener.ValidateUserInput(userInput)
+
 }

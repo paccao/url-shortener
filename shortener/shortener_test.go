@@ -6,8 +6,12 @@ import (
 	"github.com/paccao/url-shortener/shortener"
 )
 
-func TestShortenUrl(t *testing.T) {
-	if shortener.ShortenUrl() != "Go Gopher" {
-		t.Fatal("Wrong mascot :(")
+func TestValidateUserInput(t *testing.T) {
+	s := "htt://user:pass@host.com:5432/path?k=v#f"
+
+	result := shortener.ValidateUserInput(s)
+
+	if result == s {
+		t.Fatal("Url was invalid")
 	}
 }
