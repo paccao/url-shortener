@@ -1,16 +1,12 @@
 package main
 
-import (
-	"fmt"
-
-	"github.com/paccao/url-shortener/shortener"
-)
+import "github.com/paccao/url-shortener/db"
 
 func main() {
-	fmt.Println("Please input your url here: ")
+	// fmt.Println("Please input your url here: ")
 
-	userInput := shortener.ParseUserInput()
+	// userInput := shortener.ParseUserInput()
 
-	shortener.ValidateUserInput(userInput)
-
+	// shortener.ValidateUserInput(userInput)
+	db.GetUrl("")
 }
